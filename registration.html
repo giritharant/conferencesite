@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+		<meta charset="utf-8">
+<meta property="og:title" content=""/>
+		<meta property="og:image" content=""/>
+		<meta property="og:url" content=""/>
+<title>Welcome to our website</title>
+  <script src="js/modernizr.custom.js"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/jquery.fancybox.css" rel="stylesheet">
+		<link href="css/flickity.css" rel="stylesheet" >
+		<link href="css/animate.css" rel="stylesheet">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link href="css/bootstrap.css" rel="stylesheet" >
+<link href="css/main.css" rel="stylesheet" type="text/css">
+ <link href="css/settings.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+    <link href="css/style-revolution-slider.css" rel="stylesheet"> <!-- metronic revo slider styles -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        
+        <link rel="stylesheet" href="css/style.css">
+		<script>
+			function validateForm() {
+				var x = document.forms["signupform"]["user_password"].value;
+				var y = document.forms["signupform"]["user_password1"].value;
+				if (x != y) {
+					alert("Password mismatch");
+					return false;
+				}
+				else
+					return true;
+			}
+			function textdisp(val)
+			{
+				
+				var=document.getElementById('color');
+				if(val=='others')
+					element.style.display='block';
+				else  
+					element.style.display='none';
+			}
+
+
+		</script>	
+    </head>
+    
+     
+
+    <body>
+		<div class="container-fluid indexhead">
+<div class="indexHeader">
+  <div class="headerLeft"><h2>Big Data </h2> <!-- <img src="images/logo1.png"> --></div>
+  <div class="headerRight clearfix">
+    
+  
+    <div  class="navbar navbar-default  innerTitle" role="navigation">
+      <div  class=" menu navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle toggle-menu menu-right push-body" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        </div>
+        <div class="  cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="bs-example-navbar-collapse-1">
+          <div class="sidebar-offcanvas clearfix menu"  >
+          <nav>
+  <ul>
+    <li><a href="index.php">Home</a></li>
+    <li><a href="login.php">Tutorials</a>    </li>
+    <li><a href="login.php">People</a></li>
+    <li><a href="login.php">Downloads </span></a>
+	
+	<ul> 
+	<li> <a href="login.php">Survey Papers</a> </li>
+		<li><a href="login.php"> Data Sets</a> </li>
+		<li> <a href="login.php">Tools</a> </li>
+		<li> <a href="login.php">Books </a></li>
+		</ul></li>
+              
+              <li><a href="support.php">Support</span></a></li>
+              <li><a href="contact.php">Contact</span></a></li>
+    <div style='clear:both'></div>
+   </ul>
+</nav>
+            <!--<ul class="nav navbar-nav navbar-right">
+              <li><a class="active" href="index.html"><span>HOME</span></a></li>
+              <li><a href="about-us.html">PRoFILE </span></a></li>
+              <li><a href="services.html">PROJECT </span></a>
+              
+              </li>
+              <li><a href="why-cool-curves.html">TOOLS </span></a></li>
+              <li><a href="faq.html">CAREER</span></a></li>
+              <li><a href="contact-us.php">TESTIMONIALS</span></a></li>
+              <li><a href="contact-us.php">contact US</span></a></li>
+            </ul>-->
+          </div>
+            </div>
+      </div>
+    </div>
+  </div>
+</div> </div>
+
+
+      <form action="thankyou.php" name="signupform" method="POST" onsubmit="validateForm()">
+      
+        <h1>Sign Up</h1>
+        
+        <fieldset>
+          <label>Category:</label>
+          
+          <select required />
+         <option value="">Select</option>
+           <option value="Staff">Staff</option>
+            <option value="Research Scholar">Research Scholar</option>
+            <option value="Student">Student</option>
+			 
+          </select>
+		   
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name" onFocus="if(this.value=='') this.value='';" onBlur="if(this.value =='') this.value='';" required />
+          
+            <label for="name">Roll No:</label>
+          <input type="text" id="roll" name="roll_no" onFocus="if(this.value=='') this.value='';" onBlur="if(this.value =='') this.value='';" required />
+           
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" name="user_email" required />
+          
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="user_password" required />
+          
+          <label for="password">Confirm Password:</label>
+          <input type="password" id="password" name="user_password1" required />
+		
+		   
+		  <label>Research Area:</label>
+			<select name="Research Area" required onchange="textdisp(this.value)"/>
+			<option value="">Select</option>
+			<option value="Big Data Analytics">Big Data Analytics</option>
+            <option value="Cloud Computing">Cloud Computing</option>
+            <option value="Big Data Security">Big Data Security</option>
+			<option value="others">Others</option>
+          </select>
+		 
+		
+		  
+		   <input type="text" id="Research Area" name="Research Area" style='display:none;' required placeholder="others" />
+		  
+         <!-- <input type="radio" id="staff" value="staff" name="category"><label for="staff" class="light">Staff</label><br>
+          <input type="radio" id="scholar" value="scholar" name="category"><label for="scholar" class="light">Research Scholar</label>
+          
+           <input type="radio" id="student" value="student" name="category"><label for="student" class="light">Student</label>-->
+        </fieldset>
+        
+        
+        
+         
+        
+        
+        <button type="submit">Submit</button>
+      </form>
+      
+	  <div align="center" style=""> Already registered  <a style="text-decoration:none; color:rgb(75, 201, 112)" href="login.php"> <strong>Click here</strong></a></div>
+    </body>
+
+</html>
